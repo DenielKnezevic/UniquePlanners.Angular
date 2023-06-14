@@ -1,0 +1,29 @@
+.item {
+    flex-grow: 1;
+    text-align: center;
+    width:33.3%
+  }
+.item:nth-child(1) {
+    font-family: 'GreatVibes';
+    font-size: 32px;
+  }
+.item:nth-child(2) {
+    font-family: 'Merriweather';
+    font-size: 32px;
+  }
+mat-icon {
+    font-size: 32px;
+  }
+mat-toolbar-row{
+    padding: 0;
+}
+mat-toolbar{
+    background-color: #ffa4bb;
+    color: white;
+}
+.flex-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
