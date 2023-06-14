@@ -5,25 +5,34 @@
   }
 .item:nth-child(1) {
     font-family: 'GreatVibes';
-    font-size: 32px;
+    font-size: 42px;
   }
 .item:nth-child(2) {
     font-family: 'Merriweather';
     font-size: 32px;
   }
 mat-icon {
-    font-size: 32px;
+    font-size: 42px;
   }
 mat-toolbar-row{
     padding: 0;
+    height: auto;
 }
 mat-toolbar{
     background-color: #ffa4bb;
     color: white;
+    height: 200px;
 }
 .flex-container{
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+img{
+  border-radius: 50%;
+  width:130px;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
