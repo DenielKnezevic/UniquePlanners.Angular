@@ -1,0 +1,28 @@
+mat-tab-group {
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    min-height: 100%;
+    margin-top: 3%;
+}
+.main{
+    min-height: 90%;
+}
+img {
+    width: 100%;
+    margin-top: 5%;
+    margin-right: 5%;
+    transition: transform 1s;
+}
+
+img:hover {
+    transform: scale(0.95);
+}
+
+div.title {
+    font-size: 24px;
+    font-weight: normal;
+    width: 100%;
+    text-align: center;
+    font-family: 'Merriweather';
+}

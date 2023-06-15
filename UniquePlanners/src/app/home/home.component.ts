@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { PlannerService } from '../services/planner.service';
+import { Planner } from '../models/planner';
+import { HttpParams } from '@angular/common/http';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +10,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  planners: Planner[] = [];
+
+  constructor(private service: PlannerService) { }
 
   ngOnInit(): void {
+    this.service.Get(new HttpParams().append("includePlannerCovers", true)).subscribe(value => {
+      this.planners = value;
+    });
   }
 
 }
