@@ -1,0 +1,59 @@
+.inputs{
+    height: 80%;
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .form{
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+.login {
+    width: 400px;
+    height: 400px;
+    background-color: white;
+    border-radius: 3px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+h1 {
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10%
+}
+
+mat-form-field {
+    width: 70%;
+}
+
+button {
+    width: 70%;
+    margin-top: 10%;
+    text-align: center;
+    color: white;
+}
+
+p{
+    width:70%;
+    text-align: center;
+}
+
+p a {
+    color: #ff7c9d;
+    cursor: pointer;
+}
+
+p a:hover {
+    color: #ff7c9d;
+    text-decoration: none;
+}

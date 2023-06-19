@@ -7,7 +7,7 @@ export class BaseService<T> {
   baseUrl: string = 'http://localhost:58188/api/';
   endpoint: string = '';
 
-  constructor(endpoint: string, private http: HttpClient) {
+  constructor(endpoint: string,public http: HttpClient) {
     this.endpoint = endpoint;
   }
 

@@ -1,0 +1,25 @@
+.cover {
+    height: 100%;
+    width: 100%;
+    background-image: url('../../assets/bg1.jpg');
+    background-size: 100%;
+    z-index: -1;
+    position: absolute;
+}
+
+.bgcolor {
+    height: 100%;
+    width: 100%;
+    background-color: #ffc4d3;
+    opacity: 0.7;
+}
+
+
+.main {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

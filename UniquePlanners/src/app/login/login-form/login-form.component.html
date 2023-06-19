@@ -1,0 +1,17 @@
+<div class="login">
+    <h1>SIGN IN</h1>
+    <div class="inputs">
+        <form class="form" [formGroup]="profileForm" (ngSubmit)="login()">
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Username</mat-label>
+                <input formControlName="username" matInput>
+            </mat-form-field>
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Password</mat-label>
+                <input formControlName="password" matInput>
+            </mat-form-field>
+            <button type="submit" [disabled]="profileForm.invalid" color="accent" mat-raised-button>Sign in</button><br>
+            <p>Registracija trenutno nije otvorena, stranicu možete posjetiti bez logina.</p>
+        </form>
+    </div>
+</div>

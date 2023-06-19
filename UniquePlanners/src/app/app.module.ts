@@ -9,6 +9,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatCardModule} from '@angular/material/card';
 import {MatMenuModule} from '@angular/material/menu';
 import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
+import { MatFormFieldModule } from '@angular/material/form-field'
+import {MatInputModule} from '@angular/material/input';
+import { FormsModule,ReactiveFormsModule  } from '@angular/forms';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -20,6 +24,8 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { ContactComponent } from './contact/contact.component';
 import { FooterBottomComponent } from './contact/footer-bottom/footer-bottom.component';
 import { FooterTopComponent } from './contact/footer-top/footer-top.component';
+import { LoginComponent } from './login/login.component';
+import { LoginFormComponent } from './login/login-form/login-form.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +36,8 @@ import { FooterTopComponent } from './contact/footer-top/footer-top.component';
     ContactComponent,
     FooterBottomComponent,
     FooterTopComponent,
+    LoginComponent,
+    LoginFormComponent,
   ],
   imports: [
     BrowserModule,
@@ -44,7 +52,12 @@ import { FooterTopComponent } from './contact/footer-top/footer-top.component';
     MatGridListModule,
     HttpClientModule,
     MatMenuModule,
-    ScrollToModule.forRoot()
+    ScrollToModule.forRoot(),
+    MatFormFieldModule,
+    MatInputModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
