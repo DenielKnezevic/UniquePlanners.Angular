@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { PlannerService } from '../services/planner.service';
 import { Planner } from '../models/planner';
 import { HttpParams } from '@angular/common/http';
@@ -9,7 +9,6 @@ import { HttpParams } from '@angular/common/http';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-
   planners: Planner[] = [];
 
   constructor(private service: PlannerService) { }

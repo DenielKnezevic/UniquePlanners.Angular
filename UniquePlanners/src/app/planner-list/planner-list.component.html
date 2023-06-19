@@ -3,8 +3,10 @@
     <mat-tab-group dynamicHeight color="accent">
         <mat-tab *ngFor="let planner of planners" [label]="planner.name">
             <div class="example-small-box mat-elevation-z4">
+                <div class="description">{{planner.description}}</div>
                 <mat-grid-list cols="4" rowHeight="1:1">
-                    <mat-grid-tile *ngFor="let cover of planner.plannerCovers"><img
+                    <mat-grid-tile *ngFor="let cover of planner.plannerCovers">
+                        <img
                             [src]="'data:image/jpeg;base64,' + cover.cover"></mat-grid-tile>
                 </mat-grid-list>
             </div>

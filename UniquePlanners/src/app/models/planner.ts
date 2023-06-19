@@ -5,5 +5,6 @@ export interface Planner {
     userId:number,
     name:string,
     price:number,
+    description:string,
     plannerCovers:PlannerCovers[]
 }

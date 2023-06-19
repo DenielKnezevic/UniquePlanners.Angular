@@ -1,13 +1,20 @@
 <mat-toolbar>
   <mat-toolbar-row>
     <div class="flex-container">
-    <div class="item"><span>Sanjaj, planiraj, uradi</span></div>
-    <div class="item">
-      <img src="assets/logo.jpg">
-      <br><span>UNIQUE PLANNERS</span></div>
-    <div class="item"><button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-      <mat-icon>menu</mat-icon>
-    </button></div>
+      <div class="item"><span>Sanjaj, planiraj, uradi</span></div>
+      <div class="item">
+        <img src="assets/logo.png">
+        <br><span>UNIQUE PLANNERS</span>
+      </div>
+      <div class="item"><button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" [matMenuTriggerFor]="menu">
+          <mat-icon>menu</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu" class="menu">
+          <button [ngxScrollTo] = "'aboutUs'" mat-menu-item>O NAMA</button>
+          <button [ngxScrollTo] = "'plannerList'" mat-menu-item>PRIMJERI KORICA</button>
+          <button [ngxScrollTo] = "'contact'" mat-menu-item>KONTAKT</button>
+          </mat-menu>
+      </div>
     </div>
   </mat-toolbar-row>
 </mat-toolbar>

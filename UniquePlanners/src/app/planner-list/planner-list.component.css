@@ -26,3 +26,16 @@ div.title {
     text-align: center;
     font-family: 'Merriweather';
 }
+
+div.description{
+    margin-bottom: 2%;
+    width:85%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-family: 'Merriweather';
+    font-size: 15px;
+}
+.example-small-box{
+    padding-top: 2%;
+}
