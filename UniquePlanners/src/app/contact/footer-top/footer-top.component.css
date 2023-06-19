@@ -1,0 +1,38 @@
+.description {
+    padding-top: 1%;
+    min-height: 70%;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 3%;
+
+}
+
+span {
+    width: 90%;
+    text-align: center;
+    font-family: 'Merriweather';
+    font-size: 15px;
+    margin-bottom: 4%;
+}
+
+.shop {
+    width: 450px;
+    transition: transform 1s, filter 1s;
+}
+
+.shop:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(10px 10px 10px grey);
+}
+
+div.images {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}

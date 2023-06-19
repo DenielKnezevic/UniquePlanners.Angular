@@ -18,6 +18,8 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import { HttpClientModule } from '@angular/common/http';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { ContactComponent } from './contact/contact.component';
+import { FooterBottomComponent } from './contact/footer-bottom/footer-bottom.component';
+import { FooterTopComponent } from './contact/footer-top/footer-top.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,8 @@ import { ContactComponent } from './contact/contact.component';
     PlannerListComponent,
     AboutUsComponent,
     ContactComponent,
+    FooterBottomComponent,
+    FooterTopComponent,
   ],
   imports: [
     BrowserModule,
