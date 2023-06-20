@@ -10,7 +10,7 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class LoginFormComponent implements OnInit {
 
-  @Output() sendNotification = new EventEmitter<boolean>();
+  @Output() login = new EventEmitter<LoginModel>();
 
   profileForm = this.form.group({
     username: ['',[Validators.minLength(4),Validators.required]],
@@ -22,23 +22,14 @@ export class LoginFormComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  login(){
+  logIn(){
 
       const login : LoginModel = {
       username: this.profileForm.get('username')?.value ?? "",
       password: this.profileForm.get('password')?.value ?? ""
     }
-
-    this.service.login(login);
-
-    let isLoggedIn:boolean = true;
-
-    if(localStorage.getItem("jwt") === null)
-    {
-      isLoggedIn = false;
-    }
       
-    this.sendNotification.emit(isLoggedIn);
+    this.login.emit(login);
     
   }
 
