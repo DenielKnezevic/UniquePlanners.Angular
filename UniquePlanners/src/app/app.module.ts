@@ -13,6 +13,7 @@ import { MatFormFieldModule } from '@angular/material/form-field'
 import {MatInputModule} from '@angular/material/input';
 import { FormsModule,ReactiveFormsModule  } from '@angular/forms';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { JwtModule } from "@auth0/angular-jwt";
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -26,6 +27,10 @@ import { FooterBottomComponent } from './contact/footer-bottom/footer-bottom.com
 import { FooterTopComponent } from './contact/footer-top/footer-top.component';
 import { LoginComponent } from './login/login.component';
 import { LoginFormComponent } from './login/login-form/login-form.component';
+
+export function tokenGetter() { 
+  return localStorage.getItem("jwt"); 
+}
 
 @NgModule({
   declarations: [
@@ -57,7 +62,14 @@ import { LoginFormComponent } from './login/login-form/login-form.component';
     MatInputModule,
     FormsModule,
     ReactiveFormsModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    JwtModule.forRoot({
+      config: {
+        tokenGetter: tokenGetter,
+        allowedDomains: [],
+        disallowedRoutes: []
+      }
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

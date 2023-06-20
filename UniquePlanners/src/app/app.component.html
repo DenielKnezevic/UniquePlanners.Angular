@@ -13,7 +13,9 @@
           <button [ngxScrollTo] = "'aboutUs'" routerLink="" mat-menu-item>O NAMA</button>
           <button [ngxScrollTo] = "'plannerList'" routerLink="" mat-menu-item>PRIMJERI KORICA</button>
           <button [ngxScrollTo] = "'contact'" routerLink="" mat-menu-item>KONTAKT</button>
-          <button routerLink="/login" mat-menu-item>LOGIN</button>
+          <button *ngIf="jwtService.checkAdminRole() == true" routerLink="" mat-menu-item>ADMIN PANEL</button>
+          <button *ngIf="jwtService.isLoggedIn() == false" routerLink="/login" [ngxScrollTo]="'login'" mat-menu-item>LOG IN</button>
+          <button (click)="logOut()" *ngIf="jwtService.isLoggedIn() == true" routerLink="/" mat-menu-item>LOG OUT</button>
           </mat-menu>
       </div>
     </div>

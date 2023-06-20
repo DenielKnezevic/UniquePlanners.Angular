@@ -5,13 +5,14 @@ import { User } from '../models/user';
 import { LoginModel } from '../models/login-model';
 import { Router } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { SnackbarService } from './snackbar.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService extends BaseService<User> {
 
-  constructor(http:HttpClient, private router:Router, private snackbar:MatSnackBar) { super("user",http) }
+  constructor(http:HttpClient, private router:Router, private snackbar:SnackbarService) { super("user",http) }
 
   login(model:LoginModel){
     
@@ -22,7 +23,7 @@ export class UserService extends BaseService<User> {
 
       if(localStorage.getItem("jwt") !== null)
       {
-        this.snackbar.open("Logged in successfully", "Close" , {horizontalPosition:'right',verticalPosition:'top'});
+        this.snackbar.showMessage("Logged in successfully");
       }
 
       this.router.navigateByUrl("");

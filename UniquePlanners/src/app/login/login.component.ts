@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { SnackbarService } from '../services/snackbar.service';
 
 @Component({
   selector: 'app-login',
@@ -8,7 +9,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private snackbar:MatSnackBar) { }
+  constructor(private snackbar:SnackbarService) { }
 
   ngOnInit(): void {
   }
@@ -16,7 +17,7 @@ export class LoginComponent implements OnInit {
   notify($event: boolean) {
     if(!$event)
     {
-      this.snackbar.open("Wrong username or password", "Close" , {horizontalPosition:'right',verticalPosition:'top'});
+      this.snackbar.showMessage("Wrong username or password");
     }
   }
 
