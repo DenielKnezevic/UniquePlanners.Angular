@@ -1,10 +1,9 @@
 import { HttpClient, HttpParams } from "@angular/common/http";
-import { Observable } from "rxjs";
 
 
 export class BaseService<T> {
 
-  baseUrl: string = 'http://localhost:58188/api/';
+  baseUrl: string = 'http://localhost:5192/api/';
   endpoint: string = '';
 
   constructor(endpoint: string,public http: HttpClient) {
