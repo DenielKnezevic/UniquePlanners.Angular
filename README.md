@@ -7,3 +7,14 @@ The application consists of a user-friendly web app that provides information ab
 To facilitate seamless management, the application also includes an admin panel. The admin panel empowers the administrator to effortlessly add new types of planners and their corresponding designs, ensuring the shop can regularly update its offerings to meet customer demands.
 
 With its clean architecture and the powerful combination of .NET Core for the backend, Angular for the web app, and Docker for containerization, the Unique Planners application provides an intuitive and efficient platform for both customers and the shop's administrative team.
+
+
+
+## Login
+
+When you are finished cloning UniquePlanners.API and after you start docker container for the API, use these credentials for log in.
+
+```
+Username: User
+Password: User123
+```
