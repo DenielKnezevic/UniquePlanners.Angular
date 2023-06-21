@@ -28,7 +28,6 @@ mat-icon {
   width: auto;
   height: 30%;
   color:white;
-  border-bottom: 1px white solid;
   transition: 0.5s;
 }
 
@@ -38,7 +37,7 @@ mat-toolbar-row {
 }
 
 mat-toolbar {
-  background-color: #ffa4bb;
+  background-color: #ffc6d4;
   color: white;
 }
 
