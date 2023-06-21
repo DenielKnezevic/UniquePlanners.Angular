@@ -8,6 +8,10 @@ To facilitate seamless management, the application also includes an admin panel.
 
 With its clean architecture and the powerful combination of .NET Core for the backend, Angular for the web app, and Docker for containerization, the Unique Planners application provides an intuitive and efficient platform for both customers and the shop's administrative team.
 
+### Things to be done in the next few days:
+- Add admin panel
+- Edit UI and fix the positions of certain components
+- Add pagination
 
 
 ## Login
