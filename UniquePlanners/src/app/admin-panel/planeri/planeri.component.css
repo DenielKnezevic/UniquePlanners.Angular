@@ -17,3 +17,26 @@ td.mat-cell,th.mat-header-cell {
 .delete{
     color: #d50000;
 }
+
+.addButton{
+    width:15%;
+    background-color: #ffc6d4;
+}
+
+::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex {
+    background-color: #fafafa; 
+    font-size: 12px;
+}
+
+mat-form-field{
+    width:70%;
+    height: 50%;
+}
+
+.search{
+    height:15%;
+    width:100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
