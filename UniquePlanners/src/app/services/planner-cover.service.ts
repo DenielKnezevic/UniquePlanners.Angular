@@ -8,5 +8,5 @@ import { HttpClient } from '@angular/common/http';
 })
 export class PlannerCoverService extends BaseService<PlannerCovers> {
 
-  constructor(http:HttpClient) { super("PlannerCover",http)}
+  constructor(http:HttpClient) { super("PlannerCovers",http)}
 }

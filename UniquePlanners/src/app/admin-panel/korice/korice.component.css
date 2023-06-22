@@ -1,0 +1,23 @@
+table{
+    width:100%;
+}
+
+td.mat-cell,th.mat-header-cell {
+    text-align: center;
+  }
+
+img{
+    width: 50px;
+}
+
+p{
+    text-align: center;
+}
+
+.edit{
+    color:green;
+}
+
+.delete{
+    color: #d50000;
+}

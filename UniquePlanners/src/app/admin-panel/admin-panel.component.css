@@ -1,0 +1,34 @@
+.example-container{
+    height: 90%;
+}
+
+mat-drawer{
+    width:20%;
+    border-right: 2px solid #ff92ad;
+}
+
+.drawer-buttons{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+li{
+    margin-top: 20%;
+    font-family: 'Merriweather';
+    font-size: 18px;
+    color:#ff92ad;
+    list-style-type: none;
+    transition: 0.5s;
+}
+
+li:hover{
+    color:#ffd7e1;
+    cursor: pointer;
+}
+
+.active{
+    color:#ffd7e1;
+}

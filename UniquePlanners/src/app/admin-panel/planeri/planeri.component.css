@@ -1,0 +1,19 @@
+table{
+    width:100%;
+}
+
+td.mat-cell,th.mat-header-cell {
+    text-align: center;
+  }
+
+  p{
+    text-align: center;
+}
+
+.edit{
+    color:green;
+}
+
+.delete{
+    color: #d50000;
+}
