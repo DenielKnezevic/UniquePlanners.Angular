@@ -13,7 +13,7 @@ import { PlannerService } from 'src/app/services/planner.service';
 export class PlaneriComponent implements OnInit {
 
   dataSource!: MatTableDataSource<Planner>;
-  displayedColumns:string[] = ['id', 'name', 'price', 'description', 'akcija'];
+  displayedColumns:string[] = ['id', 'name', 'price', 'description', 'datumKreiranja', 'datumEditovanja', 'akcija'];
   @ViewChild(MatPaginator) paginator!: MatPaginator;
 
   constructor(private service:PlannerService) { }
@@ -23,6 +23,17 @@ export class PlaneriComponent implements OnInit {
       this.dataSource = new MatTableDataSource(x);
       this.dataSource.paginator = this.paginator;
     })
+  }
+
+  applyFilter(event: Event): void {
+    const filterValue = (event.target as HTMLInputElement).value.trim().toLowerCase();
+    this.dataSource.filter = filterValue;
+    if (this.dataSource.paginator) {
+      this.dataSource.paginator.firstPage();
+    }
+    this.dataSource.filterPredicate = (data: Planner, filter: string) => {
+      return data.name.toLowerCase().includes(filter);
+    };
   }
 
 }

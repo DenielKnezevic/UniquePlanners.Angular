@@ -6,5 +6,7 @@ export interface Planner {
     name:string,
     price:number,
     description:string,
-    plannerCovers:PlannerCovers[]
+    plannerCovers:PlannerCovers[],
+    dateCreated:Date,
+    dateModified:Date
 }

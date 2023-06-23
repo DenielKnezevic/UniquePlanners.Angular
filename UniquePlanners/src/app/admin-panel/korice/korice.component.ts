@@ -13,7 +13,7 @@ import { PlannerCoverService } from 'src/app/services/planner-cover.service';
 export class KoriceComponent implements OnInit {
   
   dataSource: MatTableDataSource<PlannerCovers> = new MatTableDataSource<PlannerCovers>();
-  displayedColumns:string[] = ['id', 'cover', 'planner', 'akcija'];
+  displayedColumns:string[] = ['id', 'cover', 'planner', 'datumKreiranja', 'datumEditovanja', 'akcija'];
   @ViewChild(MatPaginator) paginator!: MatPaginator;
 
   constructor(private service:PlannerCoverService) { }
@@ -26,5 +26,15 @@ export class KoriceComponent implements OnInit {
 
   }
 
+  applyFilter(event: Event): void {
+    const filterValue = (event.target as HTMLInputElement).value.trim().toLowerCase();
+    this.dataSource.filter = filterValue;
+    if (this.dataSource.paginator) {
+      this.dataSource.paginator.firstPage();
+    }
+    this.dataSource.filterPredicate = (data: PlannerCovers, filter: string) => {
+      return data.planner?.name.toLowerCase().includes(filter);
+    };
+  }
 
 }

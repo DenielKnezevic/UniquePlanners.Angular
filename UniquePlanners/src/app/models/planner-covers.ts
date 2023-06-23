@@ -4,5 +4,7 @@ export interface PlannerCovers {
     id:number,
     plannerId:number,
     cover:string,
-    planner:Planner
+    planner:Planner,
+    dateCreated:Date,
+    dateModified:Date
 }
