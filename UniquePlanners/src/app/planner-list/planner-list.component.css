@@ -10,7 +10,7 @@ mat-tab-group {
     min-height: 100%;
 }
 img {
-    width: 100%;
+    width: 330px;
     margin-top: 5%;
     margin-right: 5%;
     transition: transform 1s;
@@ -40,3 +40,25 @@ div.description{
 .example-small-box{
     padding-top: 2%;
 }
+
+.mat-grid-tile-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+
+  span {
+    color: black;
+    font-family: 'Merriweather';
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 2%;
+  }
+
+  .cover-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-height: 320px;
+  }

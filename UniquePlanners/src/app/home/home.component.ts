@@ -14,7 +14,12 @@ export class HomeComponent implements OnInit {
   constructor(private service: PlannerService) { }
 
   ngOnInit(): void {
-    this.service.Get(new HttpParams().append("includePlannerCovers", true)).subscribe(value => {
+    let search = {
+      'includePlannerCovers' : true,
+      'isDeleted' : false
+    }
+    let body = new HttpParams({fromObject:search})
+    this.service.Get(body).subscribe(value => {
       this.planners = value;
     });
   }
