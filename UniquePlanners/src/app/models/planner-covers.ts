@@ -6,5 +6,7 @@ export interface PlannerCovers {
     cover:string,
     planner:Planner,
     dateCreated:Date,
-    dateModified:Date
+    dateModified:Date,
+    name:string,
+    isDeleted:Boolean
 }

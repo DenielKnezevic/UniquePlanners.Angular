@@ -17,13 +17,18 @@ import { JwtModule } from "@auth0/angular-jwt";
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import { MatTableModule } from '@angular/material/table';
+import {MatDialogModule} from '@angular/material/dialog';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import {MatNativeDateModule} from "@angular/material/core";
+import {MatSelectModule} from "@angular/material/select";
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { PlannerListComponent } from './planner-list/planner-list.component';
 import {MatGridListModule} from '@angular/material/grid-list';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { ContactComponent } from './contact/contact.component';
 import { FooterBottomComponent } from './contact/footer-bottom/footer-bottom.component';
@@ -33,6 +38,9 @@ import { LoginFormComponent } from './login/login-form/login-form.component';
 import { AdminPanelComponent } from './admin-panel/admin-panel.component';
 import { PlaneriComponent } from './admin-panel/planeri/planeri.component';
 import { KoriceComponent } from './admin-panel/korice/korice.component';
+import { KoriceDialogComponent } from './admin-panel/korice/korice-dialog/korice-dialog.component';
+import { JwtInterceptor } from './models/jwt.interceptor';
+import { PlaneriDialogComponent } from './admin-panel/planeri/planeri-dialog/planeri-dialog.component';
 
 export function tokenGetter() { 
   return localStorage.getItem("jwt"); 
@@ -52,6 +60,8 @@ export function tokenGetter() {
     AdminPanelComponent,
     PlaneriComponent,
     KoriceComponent,
+    KoriceDialogComponent,
+    PlaneriDialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -81,9 +91,14 @@ export function tokenGetter() {
     }),
     MatSidenavModule,
     MatPaginatorModule,
-    MatTableModule
+    MatTableModule,
+    MatDialogModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatSelectModule,
+    
   ],
-  providers: [],
+  providers: [ { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true } ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

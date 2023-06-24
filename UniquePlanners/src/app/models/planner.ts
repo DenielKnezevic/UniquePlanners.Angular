@@ -8,5 +8,6 @@ export interface Planner {
     description:string,
     plannerCovers:PlannerCovers[],
     dateCreated:Date,
-    dateModified:Date
+    dateModified:Date,
+    isDeleted:Boolean
 }

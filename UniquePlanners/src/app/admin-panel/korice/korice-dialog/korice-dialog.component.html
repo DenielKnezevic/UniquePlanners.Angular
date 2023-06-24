@@ -1,0 +1,28 @@
+<div class="main">
+    <h1 mat-dialog-title>KORICE</h1>
+    <img *ngIf="data.cover != null" [src]="'data:image/jpeg;base64,' + data.cover" class="image">
+    <img *ngIf="data.cover == null" class="image"
+        src="https://media.istockphoto.com/id/1147544807/vector/thumbnail-image-vector-graphic.jpg?s=612x612&w=0&k=20&c=rnCKVbdxqkjlcs3xH87-9gocETqpspHFXu5dIGB4wuM=">
+    <form [formGroup]="profileForm" autocomplete="off">
+        <mat-dialog-content class="example-container">
+            <button type="button" mat-raised-button color="accent" (click)="fileInput.click()">Add image</button>
+            <input hidden (change)="onSelectedNewFile($event)" accept="image/*" #fileInput type="file" id="file">
+            <mat-form-field hideRequiredMarker="true" class="example-full-width" appearance="fill">
+                <mat-label>Naziv</mat-label>
+                <input formControlName="naziv" matInput [(ngModel)]="data.name">
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                <mat-label>Odaberi planer</mat-label>
+                <mat-select formControlName="planner" [(ngModel)]="data.plannerId">
+                  <mat-option *ngFor="let planner of planners" [value]="planner.id">
+                    {{planner.name}}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+        </mat-dialog-content>
+        <mat-dialog-actions class="buttons">
+            <button mat-raised-button mat-dialog-close="">Close</button>
+            <button mat-raised-button style="background-color: #3d3d3d;color: white" (click)="save()">Save</button>
+        </mat-dialog-actions>
+    </form>
+</div>

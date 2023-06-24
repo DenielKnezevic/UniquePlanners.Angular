@@ -1,0 +1,23 @@
+<div class="main">
+    <h1 mat-dialog-title>KORICE</h1>
+    <form [formGroup]="profileForm" autocomplete="off">
+        <mat-dialog-content class="example-container">
+            <mat-form-field hideRequiredMarker="true" class="example-full-width" appearance="fill">
+                <mat-label>Naziv</mat-label>
+                <input formControlName="name" matInput [(ngModel)]="data.name">
+            </mat-form-field>
+            <mat-form-field hideRequiredMarker="true" class="example-full-width" appearance="fill">
+                <mat-label>Cijena</mat-label>
+                <input formControlName="price" matInput [(ngModel)]="data.price">
+            </mat-form-field>
+            <mat-form-field hideRequiredMarker="true" class="example-full-width" appearance="fill">
+                <mat-label>Opis</mat-label>
+                <textarea formControlName="description" matInput placeholder="Napisi opis..." [(ngModel)]="data.description"></textarea>
+            </mat-form-field>
+        </mat-dialog-content>
+        <mat-dialog-actions class="buttons">
+            <button mat-raised-button mat-dialog-close="">Close</button>
+            <button mat-raised-button style="background-color: #3d3d3d;color: white" (click)="save()">Save</button>
+        </mat-dialog-actions>
+    </form>
+</div>
